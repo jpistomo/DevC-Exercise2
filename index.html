@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Exercise 2</title>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Font CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <center>
+    <div id="app">
         <h1>Kalkulator</h1>
-    </center>
+        <div class="kalkulator">
+            <div class="display">{{nilai || 0}}</div>
+            <!-- Row 1 -->
+            <button @click="clear()" class="top">C</button>
+            <button @click="del()" class="top">del</button>
+            <button @click="percent()" class="top">%</button>
+            <button @click="key('/')" class="operator">÷</button>
+            <!-- Row 2 -->
+            <button @click="key('7')">7</button>
+            <button @click="key('8')">8</button>
+            <button @click="key('9')">9</button>
+            <button @click="key('*')" class="operator">⨯</button>
+            <!-- Row 3 -->
+            <button @click="key('4')">4</button>
+            <button @click="key('5')">5</button>
+            <button @click="key('6')">6</button>
+            <button @click="key('-')" class="operator">-</button>
+            <!-- Row 4 -->
+            <button @click="key('1')">1</button>
+            <button @click="key('2')">2</button>
+            <button @click="key('3')">3</button>
+            <button @click="key('+')" class="operator">+</button>
+            <!-- Row 5 -->
+            <button @click="key('0')" class="zero">0</button>
+            <button @click="key('.')">.</button>
+            <button @click="equal()" class="operator">=</button>
+        </div>
+    </div>
 </body>
+<!-- Vue JS -->
+<script src="js/vue.min.js"></script>
+<!-- My JS -->
+<script src="js/app.js"></script>
+
 </html>
